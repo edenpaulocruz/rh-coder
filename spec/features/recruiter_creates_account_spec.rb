@@ -32,13 +32,13 @@ feature 'Recruiter creates account' do
     click_on 'Criar conta'
     
     fill_in 'Nome', with: 'João Almeida'
-    fill_in 'E-mail', with: 'joao.almeida@campusocde.com.br'
+    fill_in 'E-mail', with: 'joao.almeida@campuscode.com.br'
     fill_in 'Senha', with: '93hsUS'
     click_on 'Criar conta'
 
     expect(current_path).to eq(recruiter_path(Recruiter.last))
     expect(page).to have_content('João Almeida')
-    expect(page).to have_content('joao.almeida@campusocde.com.br')
+    expect(page).to have_content('joao.almeida@campuscode.com.br')
     expect(page).to have_link('Voltar')
   end
 end
