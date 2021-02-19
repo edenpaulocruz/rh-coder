@@ -1,0 +1,20 @@
+<header>
+  <p class="logo">RH Coders</p>
+</header>
+<h1>Recrutadores</h1>
+
+<%= form_with model: @recruiter do |f| %>
+  <div>
+    <%= f.label :name, 'Nome' %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :email, 'E-mail' %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :password, 'Senha' %>
+    <%= f.password_field :password %>
+  </div>
+  <%= f.submit 'Criar conta' %>
+<% end %>
