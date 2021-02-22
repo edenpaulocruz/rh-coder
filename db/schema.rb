@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_19_172539) do
+ActiveRecord::Schema.define(version: 2021_02_19_220321) do
+
+  create_table "companies", force: :cascade do |t|
+    t.string "name"
+    t.integer "cnpj"
+    t.text "adress"
+    t.string "website"
+    t.string "facebook"
+    t.string "instagram"
+    t.string "linkedin"
+    t.string "twitter"
+    t.string "business_line"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "recruiters", force: :cascade do |t|
     t.string "name"
